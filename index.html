@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fish Route Predictor | University Research Project</title>
+    <meta name="description" content="AI-Driven Fisheries Decision Support Using Oceanography, Local Catch Intelligence, Market Trends, and Ecological Screening. Final year university research project.">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#home" class="logo">SMART FISH ROUTE PREDICTOR</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#domain">Domain</a></li>
+                <li><a href="#milestones">Milestones</a></li>
+                <li><a href="#documents">Documents</a></li>
+                <li><a href="#presentations">Presentations</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. HOME SECTION -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Smart Fish Route Predictor: A Multi-Module Machine Learning Framework</h1>
+            <p>AI-Driven Fisheries Decision Support Using Oceanography, Local Catch Intelligence, Market Trends, and Ecological Screening</p>
+            
+            <div class="hero-btns">
+                <a href="#domain" class="btn">Explore the Research</a>
+                <a href="#about" class="btn btn-outline">Meet the Team</a>
+            </div>
+
+            <div class="abstract-box floating" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 24px; text-align: left; margin-top: 4rem; border: 1px solid rgba(255,255,255,0.1); max-width: 900px; margin-left: auto; margin-right: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.2);">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 0;">
+                    <strong>Research Objective:</strong> Smart Fish Route Predictor is a multi-module machine learning framework designed to support fisheries decision-making in small-scale fishing communities. By integrating oceanographic hotspot prediction, spawning-likelihood screening, market trend forecasting, and hyperlocal catch-success prediction, the system helps fishers decide where to fish, when to land catches, and when to apply ecological caution.
+                </p>
+            </div>
+        </div>
+
+        <!-- Wave SVG -->
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#f8fafc" />
+        </g>
+        </svg>
+    </section>
+
+    <!-- CORE MODULES -->
+    <section class="modules">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Framework Modules</h2>
+                <p>Four interconnected intelligence engines driving sustainable fishing decisions.</p>
+            </div>
+            <div class="modules-grid">
+                <!-- Module 1 -->
+                <div class="module-card">
+                    <div class="module-icon">🌊</div>
+                    <h3>Oceanographic Hotspot Prediction</h3>
+                    <p>Identifies high-potential fishing zones across the Indian Ocean using XGBoost classifiers and environmental telemetry.</p>
+                    <ul style="font-size: 0.85rem; color: var(--text-muted); padding-left: 1.2rem; list-style: disc;">
+                        <li>SST, SSS, Chlorophyll-a analysis</li>
+                        <li>0.5-degree spatial grid prediction</li>
+                        <li>Supports "Where to fish" decisions</li>
+                    </ul>
+                </div>
+                <!-- Module 2 -->
+                <div class="module-card">
+                    <div class="module-icon">🐟</div>
+                    <h3>Proxy Spawning-Likelihood Screening</h3>
+                    <p>Flags ecologically sensitive areas for conservation-aware harvesting based on complex environmental proxy indicators.</p>
+                    <ul style="font-size: 0.85rem; color: var(--text-muted); padding-left: 1.2rem; list-style: disc;">
+                        <li>Multi-variate ecological modeling</li>
+                        <li>Spawning-favorable area screening</li>
+                        <li>Adds ecological caution signals</li>
+                    </ul>
+                </div>
+                <!-- Module 3 -->
+                <div class="module-card">
+                    <div class="module-icon">📈</div>
+                    <h3>Market Trend Forecasting</h3>
+                    <p>Forecasts fish price trends at major markets to support landing-time optimization for better economic returns.</p>
+                    <ul style="font-size: 0.85rem; color: var(--text-muted); padding-left: 1.2rem; list-style: disc;">
+                        <li>Peliyagoda Market data (2019-2025)</li>
+                        <li>XGBoost & Ensemble Regressors</li>
+                        <li>Optimizes landing time value</li>
+                    </ul>
+                </div>
+                <!-- Module 4 -->
+                <div class="module-card">
+                    <div class="module-icon">📍</div>
+                    <h3>Hyperlocal Catch-Success Prediction</h3>
+                    <p>Predicts local catch potential at the community level using CPUE data and localized weather patterns.</p>
+                    <ul style="font-size: 0.85rem; color: var(--text-muted); padding-left: 1.2rem; list-style: disc;">
+                        <li>Focus: Point Pedro, Northern Sri Lanka</li>
+                        <li>Wind, Pressure & Local CPUE basis</li>
+                        <li>Highly localized trip guidance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- KEY RESULTS BOX -->
+            <div class="results-container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="color: white; margin-bottom: 0.5rem;">Key Performance Metrics</h2>
+                    <p style="opacity: 0.8;">Validated performance across 170,000+ total recorded observations.</p>
+                </div>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <h4>Hotspot ROC-AUC</h4>
+                        <span class="result-value">92.11%</span>
+                        <span class="result-metric">85.64% Accuracy</span>
+                    </div>
+                    <div class="result-item">
+                        <h4>Market R²</h4>
+                        <span class="result-value">98.77%</span>
+                        <span class="result-metric">4.18% MAPE</span>
+                    </div>
+                    <div class="result-item">
+                        <h4>Spawning ROC-AUC</h4>
+                        <span class="result-value">79.09%</span>
+                        <span class="result-metric">Proxy Screening Accuracy</span>
+                    </div>
+                    <div class="result-item">
+                        <h4>Local ROC-AUC</h4>
+                        <span class="result-value">96.18%</span>
+                        <span class="result-metric">80.83% F1-Score</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. DOMAIN SECTION -->
+    <section id="domain" style="background: var(--white);">
+        <div class="container text-content">
+            <div class="section-header">
+                <h2>Project Domain & Methodology</h2>
+                <p>Bridging machine learning and sustainable fisheries management.</p>
+            </div>
+            
+            <div class="domain-grid">
+                <div class="domain-item">
+                    <h3>Literature Survey</h3>
+                    <p>Traditional fisheries forecasting has relied heavily on habitat suitability models, linear regression, and ARIMA-style approaches. However, modern fisheries demand more robust methods capable of modeling the complex, non-linear interactions among oceanographic shifts, fish movement patterns, and volatile market behaviors that classical methods often fail to capture.</p>
+                </div>
+
+                <div class="domain-item">
+                    <h3>Research Gap</h3>
+                    <p>Most existing studies focus on isolated tasks: either hotspot mapping, biological spawning analysis, market prediction, or local catch modeling. Very few initiatives have successfully integrated these multi-dimensional factors into a single, coordinated framework capable of providing holistic decision support for small-scale fisheries.</p>
+                </div>
+
+                <div class="domain-item">
+                    <h3>Research Problem</h3>
+                    <p>Small-scale fishers require practical, real-time decision support to navigate rapidly changing ocean conditions and volatile economic environments. Currently, available tools are fragmented, leaving fishers to rely on intuition rather than a combined stream of spatial, ecological, and economic intelligence.</p>
+                </div>
+
+                <div class="domain-item">
+                    <h3>Research Objectives</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To identify high-potential fishing hotspots using oceanographic and catch data.
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To forecast short-term fish market trends for landing-time optimization.
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To screen potentially sensitive spawning-favorable areas using proxy ecological indicators.
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To predict hyperlocal catch success using Point Pedro CPUE and local environmental conditions.
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To integrate all modules into a unified fisheries decision-support framework.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="domain-item">
+                    <h3>Methodology</h3>
+                    <p>The system utilizes a structured data pipeline: data is harvested from diverse sources (satellite oceanography, market records, and manual fishing logs), followed by intensive preprocessing and cyclic feature engineering. <strong>XGBoost</strong> serves as our central machine learning backbone, tuned specifically for each module's unique data distribution. The final output is an integrated advisory workflow that translates model probabilities into actionable fishing routes.</p>
+                </div>
+
+                <div class="domain-item">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-grid">
+                        <!-- React -->
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg viewBox="-11.5 -10.23174 23 20.46348" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
+                                    <g stroke="#61dafb" stroke-width="1" fill="none">
+                                        <ellipse rx="11" ry="4.2"/>
+                                        <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+                                        <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="tech-name">React</div>
+                        </div>
+                        <!-- Python -->
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="#3776AB" d="M439.44 236.05c0-22.28-19.8-40.14-44.22-40.14h-35.39v44.22h44.22c2.45 0 4.43 1.98 4.43 4.42 0 2.45-1.98 4.43-4.43 4.43h-106.1c-15.34 0-27.78-12.44-27.78-27.78V115.1c0-15.34 12.44-27.78 27.78-27.78h35.39V51.93h-35.39c-44.42 0-80.44 36.02-80.44 80.44v106.1c0 24.42 19.8 44.22 44.22 44.22h106.1c24.42 0 44.22-19.8 44.22-44.22v-2.87zm-225.68 44.22H106.13c-2.45 0-4.43-1.98-4.43-4.42 0-2.45 1.98-4.43 4.43-4.43h106.1c15.34 0 27.78 12.44 27.78 27.78v106.1c0 15.34-12.44 27.78-27.78 27.78h-35.39V464.4h35.39c44.42 0 80.44-36.02 80.44-80.44V277.86c0-24.42-19.8-44.22-44.22-44.22h-106.1c-24.42 0-44.22 19.8-44.22 44.22v2.87c0 22.28 19.8 40.14 44.22 40.14h35.39v-44.22z"/>
+                                </svg>
+                            </div>
+                            <div class="tech-name">Python</div>
+                        </div>
+                        <!-- XGBoost -->
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="#2E8B57" d="M128 320l32-64-32-64h64l32 64-32 64h-64zm192 0l32-64-32-64h64l32 64-32 64h-64zm-96-128l32-64-32-64h64l32 64-32 64h-64z"/>
+                                    <circle cx="256" cy="256" r="200" fill="none" stroke="#2E8B57" stroke-width="20"/>
+                                </svg>
+                            </div>
+                            <div class="tech-name">XGBoost</div>
+                        </div>
+                        <!-- LSTM -->
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="#003366" d="M256 64C150 64 64 150 64 256s86 192 192 192s192-86 192-192S362 64 256 64zm0 344c-84 0-152-68-152-152s68-152 152-152s152 68 152 152s-68 152-152 152zm-40-232h80v16h-32v32h32v16h-32v32h32v16h-80l40-112z"/>
+                                </svg>
+                            </div>
+                            <div class="tech-name">LSTM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. MILESTONES SECTION -->
+    <section id="milestones">
+        <div class="container">
+            <div class="section-header">
+                <h2>Project Milestones</h2>
+                <p>Tracking progress through the academic calendar.</p>
+            </div>
+            <div class="timeline">
+                <div class="milestone-card">
+                    <div class="milestone-meta">
+                        <span>October 2023</span>
+                        <span style="color: var(--accent-color); font-weight: 600;">Completed</span>
+                    </div>
+                    <h3>Project Proposal</h3>
+                    <p>Initial research problem identification and feasibility study submitted to the university panel.</p>
+                </div>
+                <div class="milestone-card">
+                    <div class="milestone-meta">
+                        <span>January 2024</span>
+                        <span style="color: var(--accent-color); font-weight: 600;">Completed</span>
+                    </div>
+                    <h3>Progress Presentation 1</h3>
+                    <p>Successful defense of the initial data collection phase and exploratory data analysis (EDA).</p>
+                </div>
+                <div class="milestone-card">
+                    <div class="milestone-meta">
+                        <span>April 2024</span>
+                        <span style="color: var(--accent-color); font-weight: 600;">Completed</span>
+                    </div>
+                    <h3>Progress Presentation 2</h3>
+                    <p>Demonstration of individual module performance and preliminary integration test results.</p>
+                </div>
+                <div class="milestone-card">
+                    <div class="milestone-meta">
+                        <span>August 2024</span>
+                        <span>Upcoming</span>
+                    </div>
+                    <h3>Final Assessment</h3>
+                    <p>Comprehensive review of the final integrated framework and experimental validation results.</p>
+                </div>
+                <div class="milestone-card">
+                    <div class="milestone-meta">
+                        <span>September 2024</span>
+                        <span>Upcoming</span>
+                    </div>
+                    <h3>Viva Voce</h3>
+                    <p>The final oral examination and defense of the complete research methodology and findings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. DOCUMENTS & 5. PRESENTATIONS SECTION -->
+    <section id="documents" style="background: #eff6ff;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Academic Resources</h2>
+                <p>Official project documentation and presentation materials.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div>
+                    <h3 style="margin-bottom: 2rem; color: var(--primary-color);">Project Documents</h3>
+                    <div class="link-card">
+                        <span>Project Charter</span>
+                        <div class="btn-view" onclick="alert('Document link will be added soon!')">View PDF</div>
+                    </div>
+                    <div class="link-card">
+                        <span>Proposal Document</span>
+                        <div class="btn-view" onclick="alert('Document link will be added soon!')">View PDF</div>
+                    </div>
+                    <div class="link-card">
+                        <span>Final Report</span>
+                        <div class="btn-view pending">Pending</div>
+                    </div>
+                    <div class="link-card">
+                        <span>Research Paper</span>
+                        <div class="btn-view pending">Pending</div>
+                    </div>
+                </div>
+
+                <div id="presentations">
+                    <h3 style="margin-bottom: 2rem; color: var(--primary-color);">Presentations</h3>
+                    <div class="link-card">
+                        <span>Proposal Presentation</span>
+                        <div class="btn-view" onclick="alert('Presentation will be added soon!')">Open Slides</div>
+                    </div>
+                    <div class="link-card">
+                        <span>Progress Presentation 1</span>
+                        <div class="btn-view" onclick="alert('Presentation will be added soon!')">Open Slides</div>
+                    </div>
+                    <div class="link-card">
+                        <span>Progress Presentation 2</span>
+                        <div class="btn-view" onclick="alert('Presentation will be added soon!')">Open Slides</div>
+                    </div>
+                    <div class="link-card">
+                        <span>Final Presentation</span>
+                        <div class="btn-view pending">Upcoming</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT US SECTION -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet the Research Team</h2>
+                <p>The minds behind the Smart Fish Route Predictor.</p>
+            </div>
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <div class="team-card">
+                    <div class="team-img">👤</div>
+                    <h3 style="font-size: 1.4rem;">Thenushan Sritharan</h3>
+                    <p style="color: var(--secondary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">Corresponding Author</p>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;">
+                        Faculty of Computing, Sri Lanka Institute of Information Technology, Malabe, 10115, Sri Lanka<br>
+                        Faculty of Computing, SLIIT Northern Uni, Jaffna, 40000, Sri Lanka
+                    </div>
+                    <p style="font-size: 0.85rem; margin-bottom: 1.5rem;">Lead contributor to the Smart Fish Route Predictor research framework.</p>
+                    <a href="mailto:thenuthamizh05@gmail.com" style="font-size: 0.8rem; color: var(--primary-color); font-weight: 500; text-decoration: underline;">thenuthamizh05@gmail.com</a>
+                </div>
+                <!-- Member 2 -->
+                <div class="team-card">
+                    <div class="team-img">👤</div>
+                    <h3 style="font-size: 1.4rem;">Mithujana Sriranjan</h3>
+                    <p style="color: var(--secondary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">Research Team Member</p>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;">
+                        Faculty of Computing, Sri Lanka Institute of Information Technology, Malabe, 10115, Sri Lanka<br>
+                        Faculty of Computing, SLIIT Northern Uni, Jaffna, 40000, Sri Lanka
+                    </div>
+                    <p style="font-size: 0.85rem; margin-bottom: 1.5rem;">Contributor to the Smart Fish Route Predictor research project.</p>
+                    <a href="mailto:mithujanas2305@gmail.com" style="font-size: 0.8rem; color: var(--primary-color); font-weight: 500; text-decoration: underline;">mithujanas2305@gmail.com</a>
+                </div>
+                <!-- Member 3 -->
+                <div class="team-card">
+                    <div class="team-img">👤</div>
+                    <h3 style="font-size: 1.4rem;">Jathudshan Rajenthiran</h3>
+                    <p style="color: var(--secondary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">Research Team Member</p>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;">
+                        Faculty of Computing, Sri Lanka Institute of Information Technology, Malabe, 10115, Sri Lanka<br>
+                        Faculty of Computing, SLIIT Northern Uni, Jaffna, 40000, Sri Lanka
+                    </div>
+                    <p style="font-size: 0.85rem; margin-bottom: 1.5rem;">Contributor to the Smart Fish Route Predictor research project.</p>
+                    <a href="mailto:Jathudshan@gmail.com" style="font-size: 0.8rem; color: var(--primary-color); font-weight: 500; text-decoration: underline;">Jathudshan@gmail.com</a>
+                </div>
+                <!-- Member 4 -->
+                <div class="team-card">
+                    <div class="team-img">👤</div>
+                    <h3 style="font-size: 1.4rem;">Sageesan Wijayaseelan</h3>
+                    <p style="color: var(--secondary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">Research Team Member</p>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;">
+                        Faculty of Computing, Sri Lanka Institute of Information Technology, Malabe, 10115, Sri Lanka<br>
+                        Faculty of Computing, SLIIT Northern Uni, Jaffna, 40000, Sri Lanka
+                    </div>
+                    <p style="font-size: 0.85rem; margin-bottom: 1.5rem;">Contributor to the Smart Fish Route Predictor research project.</p>
+                    <a href="mailto:w.sagee5@gmail.com" style="font-size: 0.8rem; color: var(--primary-color); font-weight: 500; text-decoration: underline;">w.sagee5@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section id="contact" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Contact us for research collaboration or further inquiries.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <span style="font-size: 1.5rem;">📍</span>
+                        <div>
+                            <strong>Research Lab</strong><br>
+                            Faculty of Information Technology,<br>
+                            University of Science & Engineering.
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span style="font-size: 1.5rem;">📧</span>
+                        <div>
+                            <strong>Email</strong><br>
+                            fisheries.research@university.edu
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span style="font-size: 1.5rem;">📞</span>
+                        <div>
+                            <strong>Phone</strong><br>
+                            +94 11 234 5678
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Inquiry Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">SMART FISH ROUTE PREDICTOR</div>
+            <p style="margin-bottom: 1rem;">A Multi-Module Machine Learning Framework for Fisheries Decision Support</p>
+            <div style="font-size: 0.8rem; opacity: 0.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+                &copy; 2024 University Final Year Research Project. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
