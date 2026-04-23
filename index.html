@@ -146,107 +146,168 @@
     </section>
 
     <!-- 2. DOMAIN SECTION -->
-    <section id="domain" style="background: var(--white);">
-        <div class="container text-content">
-            <div class="section-header">
-                <h2>Project Domain & Methodology</h2>
-                <p>Bridging machine learning and sustainable fisheries management.</p>
             </div>
-            
-            <div class="domain-grid">
-                <div class="domain-item">
-                    <h3>Literature Survey</h3>
-                    <p>Traditional fisheries forecasting has relied heavily on habitat suitability models, linear regression, and ARIMA-style approaches. However, modern fisheries demand more robust methods capable of modeling the complex, non-linear interactions among oceanographic shifts, fish movement patterns, and volatile market behaviors that classical methods often fail to capture.</p>
-                </div>
 
-                <div class="domain-item">
-                    <h3>Research Gap</h3>
-                    <p>Most existing studies focus on isolated tasks: either hotspot mapping, biological spawning analysis, market prediction, or local catch modeling. Very few initiatives have successfully integrated these multi-dimensional factors into a single, coordinated framework capable of providing holistic decision support for small-scale fisheries.</p>
+            <!-- Technologies Used Section -->
+            <div class="tech-section-wrapper" style="margin-top: 6rem;">
+                <div class="section-header" style="margin-bottom: 3rem;">
+                    <h2 style="font-size: 2rem;">Technologies Used</h2>
                 </div>
-
-                <div class="domain-item">
-                    <h3>Research Problem</h3>
-                    <p>Small-scale fishers require practical, real-time decision support to navigate rapidly changing ocean conditions and volatile economic environments. Currently, available tools are fragmented, leaving fishers to rely on intuition rather than a combined stream of spatial, ecological, and economic intelligence.</p>
-                </div>
-
-                <div class="domain-item">
-                    <h3>Research Objectives</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
-                            To identify high-potential fishing hotspots using oceanographic and catch data.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
-                            To forecast short-term fish market trends for landing-time optimization.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
-                            To screen potentially sensitive spawning-favorable areas using proxy ecological indicators.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
-                            To predict hyperlocal catch success using Point Pedro CPUE and local environmental conditions.
-                        </li>
-                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
-                            To integrate all modules into a unified fisheries decision-support framework.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="domain-item">
-                    <h3>Methodology</h3>
-                    <p>The system utilizes a structured data pipeline: data is harvested from diverse sources (satellite oceanography, market records, and manual fishing logs), followed by intensive preprocessing and cyclic feature engineering. <strong>XGBoost</strong> serves as our central machine learning backbone, tuned specifically for each module's unique data distribution. The final output is an integrated advisory workflow that translates model probabilities into actionable fishing routes.</p>
-                </div>
-
-                <div class="domain-item">
-                    <h3>Technologies Used</h3>
-                    <div class="tech-grid">
-                        <!-- React -->
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <svg viewBox="-11.5 -10.23174 23 20.46348" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
-                                    <g stroke="#61dafb" stroke-width="1" fill="none">
-                                        <ellipse rx="11" ry="4.2"/>
-                                        <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
-                                        <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="tech-name">React</div>
+                <div class="tech-grid">
+                    <!-- React -->
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg viewBox="-11.5 -10.23174 23 20.46348" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
+                                <g stroke="#61dafb" stroke-width="1" fill="none">
+                                    <ellipse rx="11" ry="4.2"/>
+                                    <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+                                    <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+                                </g>
+                            </svg>
                         </div>
-                        <!-- Python -->
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill="#3776AB" d="M439.44 236.05c0-22.28-19.8-40.14-44.22-40.14h-35.39v44.22h44.22c2.45 0 4.43 1.98 4.43 4.42 0 2.45-1.98 4.43-4.43 4.43h-106.1c-15.34 0-27.78-12.44-27.78-27.78V115.1c0-15.34 12.44-27.78 27.78-27.78h35.39V51.93h-35.39c-44.42 0-80.44 36.02-80.44 80.44v106.1c0 24.42 19.8 44.22 44.22 44.22h106.1c24.42 0 44.22-19.8 44.22-44.22v-2.87zm-225.68 44.22H106.13c-2.45 0-4.43-1.98-4.43-4.42 0-2.45 1.98-4.43 4.43-4.43h106.1c15.34 0 27.78 12.44 27.78 27.78v106.1c0 15.34-12.44 27.78-27.78 27.78h-35.39V464.4h35.39c44.42 0 80.44-36.02 80.44-80.44V277.86c0-24.42-19.8-44.22-44.22-44.22h-106.1c-24.42 0-44.22 19.8-44.22 44.22v2.87c0 22.28 19.8 40.14 44.22 40.14h35.39v-44.22z"/>
-                                </svg>
-                            </div>
-                            <div class="tech-name">Python</div>
+                        <div class="tech-name">React</div>
+                    </div>
+                    <!-- Python -->
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#3776AB" d="M439.44 236.05c0-22.28-19.8-40.14-44.22-40.14h-35.39v44.22h44.22c2.45 0 4.43 1.98 4.43 4.42 0 2.45-1.98 4.43-4.43 4.43h-106.1c-15.34 0-27.78-12.44-27.78-27.78V115.1c0-15.34 12.44-27.78 27.78-27.78h35.39V51.93h-35.39c-44.42 0-80.44 36.02-80.44 80.44v106.1c0 24.42 19.8 44.22 44.22 44.22h106.1c24.42 0 44.22-19.8 44.22-44.22v-2.87zm-225.68 44.22H106.13c-2.45 0-4.43-1.98-4.43-4.42 0-2.45 1.98-4.43 4.43-4.43h106.1c15.34 0 27.78 12.44 27.78 27.78v106.1c0 15.34-12.44 27.78-27.78 27.78h-35.39V464.4h35.39c44.42 0 80.44-36.02 80.44-80.44V277.86c0-24.42-19.8-44.22-44.22-44.22h-106.1c-24.42 0-44.22 19.8-44.22 44.22v2.87c0 22.28 19.8 40.14 44.22 40.14h35.39v-44.22z"/>
+                            </svg>
                         </div>
-                        <!-- XGBoost -->
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill="#2E8B57" d="M128 320l32-64-32-64h64l32 64-32 64h-64zm192 0l32-64-32-64h64l32 64-32 64h-64zm-96-128l32-64-32-64h64l32 64-32 64h-64z"/>
-                                    <circle cx="256" cy="256" r="200" fill="none" stroke="#2E8B57" stroke-width="20"/>
-                                </svg>
-                            </div>
-                            <div class="tech-name">XGBoost</div>
+                        <div class="tech-name">Python</div>
+                    </div>
+                    <!-- XGBoost -->
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#2E8B57" d="M128 320l32-64-32-64h64l32 64-32 64h-64zm192 0l32-64-32-64h64l32 64-32 64h-64zm-96-128l32-64-32-64h64l32 64-32 64h-64z"/>
+                                <circle cx="256" cy="256" r="200" fill="none" stroke="#2E8B57" stroke-width="20"/>
+                            </svg>
                         </div>
-                        <!-- LSTM -->
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill="#003366" d="M256 64C150 64 64 150 64 256s86 192 192 192s192-86 192-192S362 64 256 64zm0 344c-84 0-152-68-152-152s68-152 152-152s152 68 152 152s-68 152-152 152zm-40-232h80v16h-32v32h32v16h-32v32h32v16h-80l40-112z"/>
-                                </svg>
-                            </div>
-                            <div class="tech-name">LSTM</div>
+                        <div class="tech-name">XGBoost</div>
+                    </div>
+                    <!-- LSTM -->
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#003366" d="M256 64C150 64 64 150 64 256s86 192 192 192s192-86 192-192S362 64 256 64zm0 344c-84 0-152-68-152-152s68-152 152-152s152 68 152 152s-68 152-152 152zm-40-232h80v16h-32v32h32v16h-32v32h32v16h-80l40-112z"/>
+                            </svg>
+                        </div>
+                        <div class="tech-name">LSTM</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- DATASET AND DATA SOURCES SECTION -->
+            <div id="dataset-section" class="dataset-container">
+                <div class="section-header" style="margin-top: 6rem; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.2rem;">Dataset and Data Sources</h2>
+                    <p style="max-width: 800px; margin-left: auto; margin-right: auto;">This project integrates multiple datasets to support fisheries decision-making across hotspot prediction, ecological screening, market forecasting, and hyperlocal catch-success prediction. Each module uses a different but complementary data source, allowing the framework to combine oceanographic intelligence, catch-based signals, market behavior, and localized fishing-ground conditions within one coordinated decision-support workflow.</p>
+                </div>
+
+                <div class="dataset-grid">
+                    <!-- Dataset 1 -->
+                    <div class="dataset-detail">
+                        <div class="dataset-badge">Module 01</div>
+                        <h3>Oceanographic and Catch Dataset for Hotspot Prediction</h3>
+                        <p>The hotspot prediction module uses an integrated catch–environment dataset developed from Indian Ocean historical catch records combined with oceanographic variables. The dataset contains 82,962 observations collected at the cell–month level, where each record links catch-weight outcomes with environmental conditions and sampling metadata. The main predictors include sea surface temperature (SST), sea surface salinity (SSS), sea surface density (SSD), sea surface height (SSH), chlorophyll-a, month-based seasonal encodings, species code, and monsoon category. Bathymetry and depth-related information are also included as part of the modeling workflow.</p>
+                        <div class="dataset-meta">
+                            <div><strong>Data Sources:</strong> Indian Ocean catch records, Copernicus CDS (cds.climate.copernicus.eu), GEBCO 2025 sub-ice dataset</div>
+                            <div><strong>Purpose:</strong> Identify high-potential fishing cells across the Indian Ocean to support "where to fish" decisions.</div>
+                        </div>
+                        <ul class="dataset-facts">
+                            <li><span>Total records:</span> 82,962</li>
+                            <li><span>Train/Val/Test:</span> 49,776 / 16,593 / 16,593</li>
+                            <li><span>Grid:</span> 0.5-degree latitude–longitude</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dataset 2 -->
+                    <div class="dataset-detail">
+                        <div class="dataset-badge">Module 02</div>
+                        <h3>Proxy Catch–Environment Dataset for Spawning-Likelihood Screening</h3>
+                        <p>The proxy spawning-likelihood module uses a supervised dataset derived from catch–environment observations. Since direct biological spawning labels were not available, the model uses a deterministic high-catch proxy label to estimate areas that may require ecological caution. The feature space includes latitude, longitude, depth, sea surface salinity (SSS), sea surface density (SSD), sea surface temperature (SST), sea surface height (SSH), chlorophyll-a, month encodings, monsoon encoding, and several interaction terms. This module should be interpreted as a conservation-oriented proxy screening component rather than direct biological confirmation of spawning activity.</p>
+                        <div class="dataset-meta">
+                            <div><strong>Data Sources:</strong> Derived from catch–environment records + Copernicus CDS + GEBCO 2025</div>
+                            <div><strong>Purpose:</strong> Flag potentially sensitive spawning-favorable areas for conservation-aware harvesting.</div>
+                        </div>
+                        <ul class="dataset-facts">
+                            <li><span>Total samples:</span> 82,962</li>
+                            <li><span>Model type:</span> XGBoost classifier</li>
+                            <li><span>Role:</span> Ecological screening / caution flagging</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dataset 3 -->
+                    <div class="dataset-detail">
+                        <div class="dataset-badge">Module 03</div>
+                        <h3>Peliyagoda Fish Market Price Dataset</h3>
+                        <p>The market forecasting module uses weekly species-level fish price records collected from the Peliyagoda Fish Market in Sri Lanka from 2019 to 2025. The raw dataset was compiled from 256 official weekly Excel sheets. Each record includes fish name information, wholesale price in Rs/kg, previous week price references, previous year price references, and percentage changes. After preprocessing, cleaning, and standardization, the final dataset contained 7,762 observations across 54 commercially important fish species.</p>
+                        <div class="dataset-meta">
+                            <div><strong>Data Sources:</strong> Official weekly market records from Peliyagoda Fish Market, Sri Lanka (2019–2025)</div>
+                            <div><strong>Purpose:</strong> Forecast short-term fish price trends for landing-time optimization.</div>
+                        </div>
+                        <ul class="dataset-facts">
+                            <li><span>Total observations:</span> 7,762</li>
+                            <li><span>Coverage:</span> 54 fish species</li>
+                            <li><span>Model:</span> XGBoost / Ensemble Voting Regression</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dataset 4 -->
+                    <div class="dataset-detail">
+                        <div class="dataset-badge">Module 04</div>
+                        <h3>Point Pedro CPUE and Weather Dataset</h3>
+                        <p>The hyperlocal catch-success module uses a ground-aware dataset created from Point Pedro fishing logs together with weather-related environmental variables. The local fishing logs were digitized into a structured dataset containing date, fishing ground, catch quantity, and effort-related information. The module also incorporates daily weather covariates such as wind speed, wind direction, pressure, and precipitation. This dataset supports localized prediction at the community fishing-ground level and captures conditions that directly influence nearshore fishing success.</p>
+                        <div class="dataset-meta">
+                            <div><strong>Data Sources:</strong> Point Pedro fishing logs / digitized fishery records, OpenWeather API</div>
+                            <div><strong>Purpose:</strong> Predict local catch success for productive fishing trips at the community scale.</div>
+                        </div>
+                        <ul class="dataset-facts">
+                            <li><span>Total records:</span> 948</li>
+                            <li><span>Weather:</span> wind, pressure, precipitation</li>
+                            <li><span>Role:</span> Hyperlocal fishing-ground recommendation</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- Data Flow Visual -->
+                <div class="data-flow-container">
+                    <h3>How Data Supports the System</h3>
+                    <div class="data-flow-visual">
+                        <div class="flow-step">
+                            <div class="flow-box">Oceanographic and Catch Data</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-target">Hotspot Prediction</div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="flow-box">Catch–Environment Proxy Data</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-target">Spawning-Likelihood Screening</div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="flow-box">Market Price Records</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-target">Market Trend Forecasting</div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="flow-box">Point Pedro CPUE + Weather Data</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-target">Hyperlocal Catch-Success Prediction</div>
+                        </div>
+                        <div class="flow-final">
+                            <div class="flow-arrow-down">↓</div>
+                            <div class="flow-combined">All Module Outputs → Fisheries Decision Support</div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -365,7 +426,9 @@
             <div class="team-grid">
                 <!-- Member 1 -->
                 <div class="team-card">
-                    <div class="team-img">👤</div>
+                    <div class="team-img">
+                        <img src="profiles/S.Thenushan.jpeg" alt="Thenushan Sritharan">
+                    </div>
                     <h3 style="font-size: 1.4rem;">Thenushan Sritharan</h3>
                     <p style="color: var(--secondary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">Corresponding Author</p>
                     <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;">
@@ -377,7 +440,9 @@
                 </div>
                 <!-- Member 2 -->
                 <div class="team-card">
-                    <div class="team-img">👤</div>
+                    <div class="team-img">
+                        <img src="profiles/Mithujana S.jpeg" alt="Mithujana Sriranjan">
+                    </div>
                     <h3 style="font-size: 1.4rem;">Mithujana Sriranjan</h3>
                     <p style="color: var(--secondary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">Research Team Member</p>
                     <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;">
@@ -389,7 +454,9 @@
                 </div>
                 <!-- Member 3 -->
                 <div class="team-card">
-                    <div class="team-img">👤</div>
+                    <div class="team-img">
+                        <img src="profiles/R.Jathudshan.jpeg" alt="Jathudshan Rajenthiran">
+                    </div>
                     <h3 style="font-size: 1.4rem;">Jathudshan Rajenthiran</h3>
                     <p style="color: var(--secondary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">Research Team Member</p>
                     <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;">
@@ -401,7 +468,9 @@
                 </div>
                 <!-- Member 4 -->
                 <div class="team-card">
-                    <div class="team-img">👤</div>
+                    <div class="team-img">
+                        <img src="profiles/W.Sageesan.jpeg" alt="Sageesan Wijayaseelan">
+                    </div>
                     <h3 style="font-size: 1.4rem;">Sageesan Wijayaseelan</h3>
                     <p style="color: var(--secondary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">Research Team Member</p>
                     <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4;">

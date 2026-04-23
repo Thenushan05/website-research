@@ -384,6 +384,10 @@ nav .container {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    padding: 3rem;
+    background: #fcfdfe;
+    border: 1px solid #eef2f6;
+    border-radius: 24px;
 }
 
 .tech-item {
@@ -503,16 +507,31 @@ nav .container {
 }
 
 .team-img {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    background: #e2e8f0;
+    background: var(--white);
     margin: 0 auto 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
-    color: var(--text-muted);
+    padding: 6px;
+    border: 3px solid var(--secondary-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-card:hover .team-img {
+    transform: scale(1.05);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
 }
 
 /* Contact Form */
@@ -559,11 +578,333 @@ footer {
 /* Responsive */
 @media (max-width: 992px) {
     .contact-container { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 2.5rem; }
+    .hero h1 { font-size: 3rem; }
+    .results-grid { gap: 1.5rem; }
 }
 
 @media (max-width: 768px) {
     .nav-links { display: none; }
+    nav .container { justify-content: center; }
+    .logo { font-size: 1.1rem; text-align: center; }
+    
     section { padding: 60px 0; }
-    .hero { height: auto; padding: 150px 0 100px; }
+    .hero { height: auto; padding: 120px 0 80px; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1.1rem; }
+    .hero-btns { flex-direction: column; gap: 1rem; width: 100%; max-width: 300px; margin: 0 auto; }
+    .btn { width: 100%; justify-content: center; padding: 1rem; }
+    
+    .container { padding: 0 1.5rem; }
+    .section-header h2 { font-size: 2rem; }
+    
+    .modules-grid { grid-template-columns: 1fr; }
+    .results-grid { grid-template-columns: 1fr; }
+    .domain-grid { gap: 2.5rem; }
+    .tech-grid { padding: 1.5rem; gap: 1rem; }
+    
+    .dataset-grid { grid-template-columns: 1fr !important; }
+    .dataset-container { padding: 2rem 1.2rem; }
+    
+    .data-flow-visual { flex-direction: column !important; align-items: center; gap: 1rem; }
+    .flow-step { flex-direction: column; width: 100%; gap: 0.5rem; }
+    .flow-arrow { transform: rotate(90deg); margin: 5px 0; }
+    .flow-box, .flow-target { width: 100%; text-align: center; }
+    .flow-combined { width: 100%; font-size: 0.95rem; padding: 1.2rem; }
+    
+    .team-grid { grid-template-columns: 1fr; }
+    .contact-form { padding: 2rem; }
+}
+
+/* ==========================================
+   DATASET & DATA SOURCES SECTION STYLES
+   ========================================== */
+
+.dataset-container {
+    padding: 5rem 4rem;
+    margin: 6rem 0;
+    background: #f9fbff;
+    border-radius: 32px;
+    border: 1px solid #eef2ff;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+@media (max-width: 768px) {
+    .dataset-container {
+        padding: 3rem 1.5rem;
+        margin: 4rem 0;
+    }
+}
+
+.dataset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.dataset-detail {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #eef2f6;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.dataset-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.dataset-detail h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+    color: var(--primary-color);
+}
+
+.dataset-detail p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.dataset-meta {
+    background: #f8fafc;
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.dataset-meta div {
+    margin-bottom: 0.5rem;
+}
+
+.dataset-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    list-style: none !important;
+}
+
+.dataset-facts li {
+    background: rgba(46, 139, 87, 0.1);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.dataset-facts li span {
+    color: var(--text-dark);
+    opacity: 0.7;
+    margin-right: 5px;
+}
+
+/* Table Styles */
+.table-container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.table-container h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid #e2e8f0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 800px;
+}
+
+th, td {
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #edf2f7;
+}
+
+th {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: #f1f5f9;
+}
+
+.table-caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+/* Data Sources Cards */
+.sources-section {
+    margin-bottom: 5rem;
+}
+
+.sources-section h3 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+}
+
+.sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.source-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    transition: var(--transition);
+}
+
+.source-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.source-card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.source-origin {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.source-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    min-height: 60px;
+}
+
+.source-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Data Flow Visual */
+.data-flow-container {
+    background: #f8fafc;
+    padding: 4rem;
+    border-radius: 30px;
+    border: 1px dashed #cbd5e1;
+    text-align: center;
+}
+
+.data-flow-container h3 {
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+}
+
+.data-flow-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flow-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.flow-box {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #e2e8f0;
+    flex: 1;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.flow-arrow {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.flow-target {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    flex: 1;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.flow-final {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flow-arrow-down {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.flow-combined {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow-md);
 }
