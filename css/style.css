@@ -1235,3 +1235,122 @@ tr:hover td {
 .inline-search input:focus {
     width: 200px;
 }
+
+/* Milestone Accordion */
+.milestone-accordion {
+    background: var(--white);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+    border-left: 5px solid var(--secondary-color);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.milestone-header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: var(--white);
+    transition: background 0.3s ease;
+}
+
+.milestone-header:hover {
+    background: #f8fafc;
+}
+
+.milestone-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.dropdown-icon {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+}
+
+.milestone-accordion.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.milestone-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease, opacity 0.4s ease;
+    padding: 0 2rem;
+    opacity: 0;
+}
+
+.milestone-accordion.active .milestone-content {
+    max-height: 500px;
+    padding: 0 2rem 2rem 2rem;
+    opacity: 1;
+}
+
+.milestone-content p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.milestone-divider {
+    height: 1px;
+    background: rgba(0,0,0,0.05);
+    margin: 1.5rem 0;
+}
+
+.milestone-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.stat-status {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    background: #f1f5f9;
+}
+
+.stat-status.completed {
+    background: #e6fcf0;
+    color: #059669;
+}
+
+.stat-status.upcoming {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.stat-status.pending {
+    background: #fef3c7;
+    color: #b45309;
+}
