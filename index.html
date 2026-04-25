@@ -38,9 +38,14 @@
             </div>
 
             <div class="abstract-box floating" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 24px; text-align: left; margin-top: 4rem; border: 1px solid rgba(255,255,255,0.1); max-width: 900px; margin-left: auto; margin-right: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.2);">
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 0;">
-                    <strong>Research Objective:</strong> Smart Fish Route Predictor is a multi-module machine learning framework designed to support fisheries decision-making in small-scale fishing communities. By integrating oceanographic hotspot prediction, spawning-likelihood screening, market trend forecasting, and hyperlocal catch-success prediction, the system helps fishers decide where to fish, when to land catches, and when to apply ecological caution.
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    <strong>Research Objective:</strong> Smart Fish Route Predictor is a multi-module machine learning framework designed to support fisheries decision-making in small-scale fishing communities. By integrating oceanographic hotspot prediction, spawning-likelihood screening, market trend forecasting, and hyperlocal catch-success prediction, the system helps fishers decide where to fish, when to land catches, and when to apply ecological caution. The framework also includes a fish variety image detection module for new fishers, using YOLOv11 and a 30,000-image dataset to support image-based fish identification.
                 </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+                    <div style="color: white; font-size: 0.9rem;"><strong>✓ 30,000</strong> fish images</div>
+                    <div style="color: white; font-size: 0.9rem;"><strong>✓ YOLOv11</strong> model</div>
+                    <div style="color: white; font-size: 0.9rem;"><strong>✓ 76%</strong> detection accuracy</div>
+                </div>
             </div>
         </div>
 
@@ -111,6 +116,17 @@
                         <li>Highly localized trip guidance</li>
                     </ul>
                 </div>
+                <!-- Module 5 -->
+                <div class="module-card">
+                    <div class="module-icon">📷</div>
+                    <h3>Fish Variety Image Detection</h3>
+                    <p>Image-based fish variety recognition using YOLOv11 to support new fishers in species identification and sorting.</p>
+                    <ul style="font-size: 0.85rem; color: var(--text-muted); padding-left: 1.2rem; list-style: disc;">
+                        <li>30,000 fish image dataset</li>
+                        <li>YOLOv11 object detection model</li>
+                        <li>76% identification accuracy</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- KEY RESULTS BOX -->
@@ -140,12 +156,173 @@
                         <span class="result-value">96.18%</span>
                         <span class="result-metric">80.83% F1-Score</span>
                     </div>
+                    <div class="result-item">
+                        <h4>Image Detection</h4>
+                        <span class="result-value">76.00%</span>
+                        <span class="result-metric">Accuracy (YOLOv11)</span>
+                    </div>
+                </div>
+
+                <!-- NEW RESULTS SUBSECTION -->
+                <div style="margin-top: 4rem; background: rgba(255,255,255,0.05); padding: 3rem; border-radius: 20px; color: white;">
+                    <h3 style="margin-bottom: 1.5rem;">Fish Variety Image Detection Results</h3>
+                    <p style="line-height: 1.8; opacity: 0.9; margin-bottom: 2rem;">The fish variety image detection module was developed to support new fishers through image-based fish recognition. Using a YOLOv11 model trained on 30,000 fish images, the module achieved an accuracy of 76%. This component expands the project beyond prediction and forecasting by adding practical species-identification support.</p>
+                    
+                    <div class="table-wrapper" style="background: white; border-radius: 15px; overflow: hidden;">
+                        <h4 style="color: var(--primary-color); padding: 1.5rem; background: #f8fafc; margin: 0; border-bottom: 1px solid #e2e8f0;">Performance Comparison</h4>
+                        <table style="color: var(--text-color);">
+                            <thead>
+                                <tr style="background: #f1f5f9;">
+                                    <th>Module</th>
+                                    <th>Primary Metric</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hotspot Prediction</td>
+                                    <td>ROC-AUC</td>
+                                    <td>92.11%</td>
+                                </tr>
+                                <tr>
+                                    <td>Market Trend Forecasting</td>
+                                    <td>R²</td>
+                                    <td>98.77%</td>
+                                </tr>
+                                <tr>
+                                    <td>Proxy Spawning-Likelihood</td>
+                                    <td>ROC-AUC</td>
+                                    <td>79.09%</td>
+                                </tr>
+                                <tr>
+                                    <td>Hyperlocal Catch-Success</td>
+                                    <td>ROC-AUC</td>
+                                    <td>96.18%</td>
+                                </tr>
+                                <tr>
+                                    <td>Fish Variety Image Detection</td>
+                                    <td>Accuracy</td>
+                                    <td>76%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. DOMAIN SECTION -->
+    <section id="domain" style="background: var(--white);">
+        <div class="container text-content">
+            <div class="section-header">
+                <h2>Project Domain & Methodology</h2>
+                <p>Bridging machine learning and sustainable fisheries management.</p>
+            </div>
+            
+            <div class="domain-grid">
+                <div class="domain-item">
+                    <h3>Literature Survey</h3>
+                    <p>Traditional fisheries forecasting has relied heavily on habitat suitability models, linear regression, and ARIMA-style approaches. However, modern fisheries demand more robust methods capable of modeling the complex, non-linear interactions among oceanographic shifts, fish movement patterns, and volatile market behaviors that classical methods often fail to capture.</p>
+                </div>
+
+                <div class="domain-item">
+                    <h3>Research Gap</h3>
+                    <p>Most existing studies focus on isolated tasks: either hotspot mapping, biological spawning analysis, market prediction, or local catch modeling. Very few initiatives have successfully integrated these multi-dimensional factors into a single, coordinated framework capable of providing holistic decision support for small-scale fisheries.</p>
+                </div>
+
+                <div class="domain-item">
+                    <h3>Research Problem</h3>
+                    <p>Small-scale fishers require practical, real-time decision support to navigate rapidly changing ocean conditions and volatile economic environments. Currently, available tools are fragmented, leaving fishers to rely on intuition rather than a combined stream of spatial, ecological, and economic intelligence.</p>
+                </div>
+
+                <div class="domain-item">
+                    <h3>Research Objectives</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To identify high-potential fishing hotspots using oceanographic and catch data.
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To forecast short-term fish market trends for landing-time optimization.
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To screen potentially sensitive spawning-favorable areas using proxy ecological indicators.
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To predict hyperlocal catch success using Point Pedro CPUE and local environmental conditions.
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To identify fish varieties using image-based computer vision for new fishers.
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
+                            To integrate all modules into a unified fisheries decision-support framework.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="domain-item">
+                    <h3>Methodology</h3>
+                    <p>The system utilizes a structured data pipeline: data is harvested from diverse sources (satellite oceanography, market records, and manual fishing logs), followed by intensive preprocessing and cyclic feature engineering. <strong>XGBoost</strong> serves as our central machine learning backbone for spatial and economic modules, while <strong>YOLOv11</strong> is used for fish variety image detection. A fish image dataset of 30,000 images is used to support practical fish identification through computer vision. The final output is an integrated advisory workflow that translates model probabilities and visual detections into actionable fishing routes.</p>
+                </div>
+
+                <div class="domain-item">
+                    <h3>Module Summary</h3>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Module</th>
+                                    <th>Objective</th>
+                                    <th>Model</th>
+                                    <th>Optimization</th>
+                                    <th>Dataset</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hotspot Prediction</td>
+                                    <td>Predict high-potential fishing zones</td>
+                                    <td>XGBoost</td>
+                                    <td>Bayesian</td>
+                                    <td>Indian Ocean Catch–Env</td>
+                                </tr>
+                                <tr>
+                                    <td>Proxy Spawning-Likelihood</td>
+                                    <td>Ecological screening</td>
+                                    <td>XGBoost</td>
+                                    <td>None</td>
+                                    <td>Proxy Spawning Dataset</td>
+                                </tr>
+                                <tr>
+                                    <td>Market Trend Forecasting</td>
+                                    <td>Forecast fish price trends</td>
+                                    <td>XGBoost / Ensemble</td>
+                                    <td>Voting Regressor</td>
+                                    <td>Peliyagoda Market Records</td>
+                                </tr>
+                                <tr>
+                                    <td>Hyperlocal Catch-Success</td>
+                                    <td>Predict local fishing success</td>
+                                    <td>XGBoost</td>
+                                    <td>Grid Search</td>
+                                    <td>Point Pedro CPUE</td>
+                                </tr>
+                                <tr>
+                                    <td>Fish Variety Image Detection</td>
+                                    <td>Identify fish varieties from images</td>
+                                    <td>YOLOv11</td>
+                                    <td>None</td>
+                                    <td>Fish image dataset</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
 
             <!-- Technologies Used Section -->
@@ -195,6 +372,18 @@
                             </svg>
                         </div>
                         <div class="tech-name">LSTM</div>
+                    </div>
+                    <!-- YOLOv11 -->
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <span style="font-size: 1.5rem; font-weight: 800; color: #ff3838;">YOLO</span>
+                        </div>
+                        <div class="tech-name">YOLOv11</div>
+                    </div>
+                    <!-- Computer Vision -->
+                    <div class="tech-item">
+                        <div class="tech-icon">👁️</div>
+                        <div class="tech-name">Computer Vision</div>
                     </div>
                 </div>
             </div>
@@ -271,6 +460,78 @@
                             <li><span>Role:</span> Hyperlocal fishing-ground recommendation</li>
                         </ul>
                     </div>
+
+                    <!-- Dataset 5 -->
+                    <div class="dataset-detail">
+                        <div class="dataset-badge">Module 05</div>
+                        <h3>Fish Variety Image Dataset</h3>
+                        <p>The fish variety image detection module uses a large-scale image dataset designed for computer vision-based fish identification. The dataset contains 30,000 fish images and is used to train a YOLOv11-based model for fish variety recognition. This module is intended to support new fishers by improving species identification through image-based detection.</p>
+                        <div class="dataset-meta">
+                            <div><strong>Data Sources:</strong> Fish image dataset prepared for fish variety image detection and recognition.</div>
+                            <div><strong>Purpose:</strong> Identify fish varieties from images for new fishers.</div>
+                        </div>
+                        <ul class="dataset-facts">
+                            <li><span>Total images:</span> 30,000</li>
+                            <li><span>Model:</span> YOLOv11</li>
+                            <li><span>Accuracy:</span> 76%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dataset Overview Table (Re-added per request) -->
+                <div class="table-container">
+                    <h3>Dataset Overview</h3>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Module</th>
+                                    <th>Dataset Name</th>
+                                    <th>Source</th>
+                                    <th>Total Records</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hotspot Prediction</td>
+                                    <td>Oceanographic and Catch Dataset</td>
+                                    <td>Indian Ocean catch records + Copernicus CDS + GEBCO 2025</td>
+                                    <td>82,962</td>
+                                    <td>Predict high-potential fishing zones</td>
+                                </tr>
+                                <tr>
+                                    <td>Proxy Spawning-Likelihood</td>
+                                    <td>Proxy Catch–Environment Dataset</td>
+                                    <td>Derived from catch–environment data using Copernicus CDS + GEBCO</td>
+                                    <td>82,962</td>
+                                    <td>Conservation-aware ecological screening</td>
+                                </tr>
+                                <tr>
+                                    <td>Market Trend Forecasting</td>
+                                    <td>Peliyagoda Fish Market Price Dataset</td>
+                                    <td>Official weekly Peliyagoda Fish Market records</td>
+                                    <td>7,762</td>
+                                    <td>Forecast fish price trends</td>
+                                </tr>
+                                <tr>
+                                    <td>Hyperlocal Catch-Success</td>
+                                    <td>Point Pedro CPUE and Weather Dataset</td>
+                                    <td>Point Pedro fishing logs + OpenWeather API</td>
+                                    <td>948</td>
+                                    <td>Predict local fishing success</td>
+                                </tr>
+                                <tr>
+                                    <td>Fish Variety Image Detection</td>
+                                    <td>Fish Variety Image Dataset</td>
+                                    <td>Fish image dataset prepared for variety recognition</td>
+                                    <td>30,000</td>
+                                    <td>Identify fish varieties using images</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="table-caption">Table 1.1: Summary of research datasets and their application within the multi-module framework.</p>
                 </div>
 
 
@@ -300,6 +561,11 @@
                             <div class="flow-box">Point Pedro CPUE + Weather Data</div>
                             <div class="flow-arrow">→</div>
                             <div class="flow-target">Hyperlocal Catch-Success Prediction</div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="flow-box">Fish Image Dataset</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-target">Fish Variety Image Detection</div>
                         </div>
                         <div class="flow-final">
                             <div class="flow-arrow-down">↓</div>
@@ -379,10 +645,42 @@
                         <span>Project Charter</span>
                         <div class="btn-view" onclick="alert('Document link will be added soon!')">View PDF</div>
                     </div>
-                    <div class="link-card">
-                        <span>Proposal Document</span>
-                        <div class="btn-view" onclick="alert('Document link will be added soon!')">View PDF</div>
-                    </div>
+                    <details class="link-card-expand">
+                        <summary>
+                            <span>Proposal Document</span>
+                            <div class="btn-view">Select Member</div>
+                        </summary>
+                        <div class="member-list">
+                            <div class="member-card">
+                                <div class="member-name">Thenushan Sritharan</div>
+                                <div class="member-actions">
+                                    <a href="#" target="_blank" class="member-btn">View PDF</a>
+                                    <a href="#" download class="member-btn btn-download-sm">Download</a>
+                                </div>
+                            </div>
+                            <div class="member-card">
+                                <div class="member-name">Mithujana Sriranjan</div>
+                                <div class="member-actions">
+                                    <a href="https://drive.google.com/file/d/1eT3-HXnjKn89Cm33VfEAAGibNzq-j92u/view?usp=drive_link" target="_blank" class="member-btn">View PDF</a>
+                                    <a href="https://drive.google.com/uc?export=download&id=1eT3-HXnjKn89Cm33VfEAAGibNzq-j92u" download class="member-btn btn-download-sm">Download</a>
+                                </div>
+                            </div>
+                            <div class="member-card">
+                                <div class="member-name">Jathudshan Rajenthiran</div>
+                                <div class="member-actions">
+                                    <a href="https://drive.google.com/file/d/13K3tB9Gmy7P5G7Sdf0mekLUsCNN0h9pk/view?usp=drive_link" target="_blank" class="member-btn">View PDF</a>
+                                    <a href="https://drive.google.com/uc?export=download&id=13K3tB9Gmy7P5G7Sdf0mekLUsCNN0h9pk" download class="member-btn btn-download-sm">Download</a>
+                                </div>
+                            </div>
+                            <div class="member-card">
+                                <div class="member-name">Sageesan Wijayaseelan</div>
+                                <div class="member-actions">
+                                    <a href="#" target="_blank" class="member-btn">View PDF</a>
+                                    <a href="#" download class="member-btn btn-download-sm">Download</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
                     <div class="link-card">
                         <span>Final Report</span>
                         <div class="btn-view pending">Pending</div>
@@ -397,15 +695,24 @@
                     <h3 style="margin-bottom: 2rem; color: var(--primary-color);">Presentations</h3>
                     <div class="link-card">
                         <span>Proposal Presentation</span>
-                        <div class="btn-view" onclick="alert('Presentation will be added soon!')">Open Slides</div>
+                        <div class="btn-group">
+                            <a href="https://docs.google.com/presentation/d/1Ec_6VZ9N8AnAjsJiu6uaD9Z7eE7t9Trj/edit?usp=drive_link&ouid=113740496877014338406&rtpof=true&sd=true" target="_blank" class="btn-view">Open Slides</a>
+                            <a href="https://docs.google.com/presentation/d/1Ec_6VZ9N8AnAjsJiu6uaD9Z7eE7t9Trj/export/pptx" class="btn-view btn-download">Download PPTX</a>
+                        </div>
                     </div>
                     <div class="link-card">
                         <span>Progress Presentation 1</span>
-                        <div class="btn-view" onclick="alert('Presentation will be added soon!')">Open Slides</div>
+                        <div class="btn-group">
+                            <a href="https://docs.google.com/presentation/d/18lzYYVeOHqAI_bHJXobfyYRn2tiio-0o/edit?usp=drive_link&ouid=113740496877014338406&rtpof=true&sd=true" target="_blank" class="btn-view">Open Slides</a>
+                            <a href="https://docs.google.com/presentation/d/18lzYYVeOHqAI_bHJXobfyYRn2tiio-0o/export/pptx" class="btn-view btn-download">Download PPTX</a>
+                        </div>
                     </div>
                     <div class="link-card">
                         <span>Progress Presentation 2</span>
-                        <div class="btn-view" onclick="alert('Presentation will be added soon!')">Open Slides</div>
+                        <div class="btn-group">
+                            <a href="https://docs.google.com/presentation/d/1z3u2yzETGjxymgvGmZK8UBBh74-9k79U/edit?usp=drive_link&ouid=113740496877014338406&rtpof=true&sd=true" target="_blank" class="btn-view">Open Slides</a>
+                            <a href="https://docs.google.com/presentation/d/1z3u2yzETGjxymgvGmZK8UBBh74-9k79U/export/pptx" class="btn-view btn-download">Download PPTX</a>
+                        </div>
                     </div>
                     <div class="link-card">
                         <span>Final Presentation</span>
