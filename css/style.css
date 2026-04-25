@@ -471,6 +471,9 @@ nav .container {
 }
 
 .btn-view {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
     font-size: 0.85rem;
@@ -479,6 +482,8 @@ nav .container {
     color: var(--white);
     transition: var(--transition);
     cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .btn-view.pending {
@@ -494,6 +499,7 @@ nav .container {
 
 .btn-group {
     display: flex;
+    align-items: center;
     gap: 0.8rem;
 }
 
@@ -503,6 +509,13 @@ nav .container {
 
 .btn-download:hover {
     background: var(--primary-color) !important;
+}
+
+.btn-icon-only {
+    padding: 0.6rem 0.8rem;
+}
+.btn-icon-only svg {
+    display: block;
 }
 
 /* Dropdown Menu */
@@ -576,101 +589,7 @@ nav .container {
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Expandable Link Card */
-.link-card-expand {
-    background: var(--white);
-    border-radius: 16px;
-    border: 1px solid rgba(0,0,0,0.05);
-    margin-bottom: 1.2rem;
-    transition: var(--transition);
-    overflow: hidden;
-}
 
-.link-card-expand summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.2rem 1.5rem;
-    cursor: pointer;
-    list-style: none;
-    outline: none;
-}
-
-.link-card-expand summary::-webkit-details-marker {
-    display: none;
-}
-
-.link-card-expand[open] {
-    box-shadow: var(--shadow-md);
-}
-
-.link-card-expand .member-list {
-    padding: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.2rem;
-    border-top: 1px solid #f1f5f9;
-    background: #fcfdfe;
-}
-
-.member-card {
-    background: var(--white);
-    padding: 1.2rem;
-    border-radius: 12px;
-    border: 1px solid #eef2f6;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    transition: var(--transition);
-}
-
-.member-card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-    border-color: var(--secondary-color);
-}
-
-.member-name {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    text-align: center;
-}
-
-.member-actions {
-    display: flex;
-    gap: 0.8rem;
-}
-
-.member-btn {
-    flex: 1;
-    text-align: center;
-    padding: 0.6rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border-radius: 8px;
-    background: #f1f5f9;
-    color: var(--primary-color);
-    transition: var(--transition);
-    border: 1px solid transparent;
-}
-
-.member-btn:hover {
-    background: var(--primary-color);
-    color: var(--white);
-    box-shadow: var(--shadow-sm);
-}
-
-.member-btn.btn-download-sm {
-    background: rgba(46, 139, 87, 0.1);
-    color: var(--accent-color);
-}
-
-.member-btn.btn-download-sm:hover {
-    background: var(--accent-color);
-    color: var(--white);
-    border-color: var(--accent-color);
-}
 
 /* Team Section */
 .team-grid {
