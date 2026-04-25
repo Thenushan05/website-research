@@ -14,15 +14,20 @@
     <nav>
         <div class="container">
             <a href="#home" class="logo">SMART FISH ROUTE PREDICTOR</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#domain">Domain</a></li>
-                <li><a href="#milestones">Milestones</a></li>
-                <li><a href="#documents">Documents</a></li>
-                <li><a href="#presentations">Presentations</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-actions">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#domain">Domain</a></li>
+                    <li><a href="#milestones">Milestones</a></li>
+                    <li><a href="#documents">Documents</a></li>
+                    <li><a href="#presentations">Presentations</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="search-trigger" id="searchTrigger" aria-label="Search content">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -180,22 +185,22 @@
             
             <div class="domain-grid">
                 <div class="domain-item">
-                    <h3>Literature Survey</h3>
+                    <h3 id="literature-survey">Literature Survey</h3>
                     <p>Traditional fisheries forecasting has relied heavily on habitat suitability models, linear regression, and ARIMA-style approaches. However, modern fisheries demand more robust methods capable of modeling the complex, non-linear interactions among oceanographic shifts, fish movement patterns, and volatile market behaviors that classical methods often fail to capture.</p>
                 </div>
 
                 <div class="domain-item">
-                    <h3>Research Gap</h3>
+                    <h3 id="research-gap">Research Gap</h3>
                     <p>Most existing studies focus on isolated tasks: either hotspot mapping, biological spawning analysis, market prediction, or local catch modeling. Very few initiatives have successfully integrated these multi-dimensional factors into a single, coordinated framework capable of providing holistic decision support for small-scale fisheries.</p>
                 </div>
 
                 <div class="domain-item">
-                    <h3>Research Problem</h3>
+                    <h3 id="research-problem">Research Problem</h3>
                     <p>Small-scale fishers require practical, real-time decision support to navigate rapidly changing ocean conditions and volatile economic environments. Currently, available tools are fragmented, leaving fishers to rely on intuition rather than a combined stream of spatial, ecological, and economic intelligence.</p>
                 </div>
 
                 <div class="domain-item">
-                    <h3>Research Objectives</h3>
+                    <h3 id="research-objectives">Research Objectives</h3>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 1rem; padding-left: 2rem; position: relative;">
                             <span style="position: absolute; left: 0; color: var(--secondary-color);">✓</span>
@@ -225,12 +230,12 @@
                 </div>
 
                 <div class="domain-item">
-                    <h3>Methodology</h3>
+                    <h3 id="methodology">Methodology</h3>
                     <p>The methodology of this research follows a multi-module machine learning and computer vision approach. First, relevant datasets such as oceanographic variables, historical catch records, Peliyagoda fish market data, Point Pedro local catch logs, weather data, and FishNet image data are collected and prepared. Each dataset is cleaned, transformed, and converted into suitable feature sets for its specific module. After preprocessing, separate models are developed for each component. <strong>XGBoost</strong> is mainly used for hotspot prediction, market forecasting, proxy spawning-likelihood screening, and hyperlocal catch-success prediction because it can handle nonlinear relationships and mixed data types effectively. For fish variety image detection, <strong>YOLO11 Nano</strong> is used with the FishNet image dataset. Finally, each model is evaluated using suitable metrics such as accuracy, ROC-AUC, PR-AUC, F1-score, RMSE, R², MAPE, precision, recall, and mAP, and the outputs are integrated into one decision-support framework.</p>
                 </div>
 
                 <div class="domain-item">
-                    <h3>Module Summary</h3>
+                    <h3 id="module-summary">Module Summary</h3>
                     <div class="table-wrapper">
                         <table>
                             <thead>
@@ -287,7 +292,7 @@
             <!-- Technologies Used Section -->
             <div class="tech-section-wrapper" style="margin-top: 6rem;">
                 <div class="section-header" style="margin-bottom: 3rem;">
-                    <h2 style="font-size: 2rem;">Technologies Used</h2>
+                    <h2 id="technologies-used" style="font-size: 2rem;">Technologies Used</h2>
                 </div>
                 <div class="tech-grid">
                     <!-- React -->
@@ -799,6 +804,147 @@
             </div>
         </div>
     </footer>
+
+    <!-- REDESIGNED SEARCH OVERLAY -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-modal">
+            <div class="search-header">
+                <div class="search-input-wrapper">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" class="search-input" id="searchInput" placeholder="What are you looking for?" autocomplete="off">
+                </div>
+                <button class="close-search" id="closeSearch" aria-label="Close search" style="background: rgba(255,255,255,0.1); color: #fff;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <!-- Premium results will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const searchTrigger = document.getElementById('searchTrigger');
+        const searchOverlay = document.getElementById('searchOverlay');
+        const closeSearch = document.getElementById('closeSearch');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        const contentIndex = [
+            // Headings
+            { title: 'Literature Survey', category: 'HEADING', id: 'literature-survey', text: 'Habitat suitability models, linear regression, and ARIMA-style approaches.' },
+            { title: 'Research Gap', category: 'HEADING', id: 'research-gap', text: 'Integrating multi-dimensional factors into a single coordinated framework.' },
+            { title: 'Research Problem', category: 'HEADING', id: 'research-problem', text: 'Decision support to navigate rapidly changing ocean conditions.' },
+            { title: 'Research Objectives', category: 'HEADING', id: 'research-objectives', text: 'Identify hotspots, forecast markets, screen spawning, predict catch.' },
+            { title: 'Methodology', category: 'HEADING', id: 'methodology', text: 'Data pipeline, XGBoost, YOLO11 Nano, and model evaluation metrics.' },
+            { title: 'Module Summary', category: 'HEADING', id: 'module-summary', text: 'Overview of modules, models, datasets, and optimization techniques.' },
+            { title: 'Technologies Used', category: 'HEADING', id: 'technologies-used', text: 'React, Python, XGBoost, LSTM, YOLO11 Nano, and more.' },
+            
+            // Modules
+            { title: 'Oceanographic Hotspot Prediction', category: 'MODULE 01', id: 'domain', text: 'Sea Surface Temperature, Salinity, Chlorophyll-a analysis.' },
+            { title: 'Proxy Spawning-Likelihood Screening', category: 'MODULE 02', id: 'domain', text: 'Ecological screening and conservation-aware harvesting.' },
+            { title: 'Market Trend Forecasting', category: 'MODULE 03', id: 'domain', text: 'Peliyagoda Market price trends and economic returns.' },
+            { title: 'Hyperlocal Catch-Success Prediction', category: 'MODULE 04', id: 'domain', text: 'Point Pedro community catch-success data.' },
+            { title: 'Fish Variety Image Detection', category: 'MODULE 05', id: 'domain', text: 'YOLO11 Nano computer vision for species identification.' },
+            
+            // Other Sections
+            { title: 'Project Proposal', category: 'DOCUMENT', id: 'documents', text: 'Detailed research charter and proposal documentation.' },
+            { title: 'Research Presentation', category: 'PRESENTATION', id: 'presentations', text: 'Progress reviews and final presentation slides.' },
+            { title: 'Meet the Team', category: 'ABOUT', id: 'about', text: 'Supervisors and undergraduate researchers information.' }
+        ];
+
+        function toggleSearch(show) {
+            if (show) {
+                searchOverlay.style.display = 'flex';
+                setTimeout(() => {
+                    searchOverlay.classList.add('active');
+                    searchInput.focus();
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            } else {
+                searchOverlay.classList.remove('active');
+                setTimeout(() => {
+                    searchOverlay.style.display = 'none';
+                    searchInput.value = '';
+                    searchResults.innerHTML = '';
+                }, 300);
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        searchTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleSearch(true);
+        });
+
+        closeSearch.addEventListener('click', () => toggleSearch(false));
+        
+        searchOverlay.addEventListener('click', (e) => {
+            if (e.target === searchOverlay) toggleSearch(false);
+        });
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            if (query.length < 2) {
+                searchResults.innerHTML = '';
+                return;
+            }
+
+            const results = contentIndex.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.text.toLowerCase().includes(query) ||
+                item.category.toLowerCase().includes(query)
+            );
+
+            renderResults(results);
+        });
+
+        function renderResults(results) {
+            if (results.length === 0) {
+                searchResults.innerHTML = '<div class="no-results"><p>No matching results found.</p></div>';
+                return;
+            }
+
+            searchResults.innerHTML = results.map(item => `
+                <div class="result-item" onclick="navigateTo('${item.id}')">
+                    <span class="result-category">${item.category}</span>
+                    <span class="result-title">${item.title}</span>
+                    <span class="result-excerpt">${item.text}</span>
+                </div>
+            `).join('');
+        }
+
+        function navigateTo(id) {
+            toggleSearch(false);
+            setTimeout(() => {
+                const element = document.getElementById(id);
+                if (element) {
+                    const offset = 100;
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const elementRect = element.getBoundingClientRect().top;
+                    const elementPosition = elementRect - bodyRect;
+                    const offsetPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    element.classList.add('search-highlight');
+                    setTimeout(() => element.classList.remove('search-highlight'), 2000);
+                }
+            }, 400);
+        }
+
+        // Keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') toggleSearch(false);
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                toggleSearch(true);
+            }
+        });
+    </script>
 
 </body>
 </html>
